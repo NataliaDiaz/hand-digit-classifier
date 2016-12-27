@@ -1,29 +1,26 @@
 # hand-digit-classifier
 
-MNIST Handwritten Digit Classifier flask application   ```diaz.rodriguez.natalia@gmail.com```
+MNIST Handwritten Digit Classifier flask application   `diaz.rodriguez.natalia@gmail.com`
 
 
-How to run the flask application's builtin server:
+How to run the flask application's builtin server (runs on http://127.0.0.1:5000/):
 
 ```$ export FLASK_APP=digit_recognition.py
 $ flask run
- Running on http://127.0.0.1:5000/
 ```
 
-Alternatively you can use:
+Alternatively you can use (to run on http://127.0.0.1:5000/):
 
 ```
 $ export FLASK_APP=digit_recognition.py
 $ python -m flask run
- Running on http://127.0.0.1:5000/
- ```
+```
 
 Now head over to http://127.0.0.1:5000/, and you should see the application where an image can be uploaded for recognition. In order to download test and train images, run:
 
 ```python
 dc = DigitClassifier()
 dc.download_imgs("data/train.csv", "data/test.csv", "./data/train/", "./data/test/")
-
 ```
 
 To train and predict with DigitClassifier:
@@ -76,24 +73,17 @@ pip install numpy jupyter keras matplotlib
 
 
 # Dataset:
-[MNIST](http://yann.lecun.com/exdb/mnist/)
-TRAINING SET LABEL FILE (train-labels-idx1-ubyte):
+[MNIST](http://yann.lecun.com/exdb/mnist/) TRAINING SET LABEL FILE (train-labels-idx1-ubyte):
 
-
+```
 [offset] [type]          [value]          [description]
-
 0000     32 bit integer  0x00000801(2049) magic number (MSB first)
-
 0004     32 bit integer  60000            number of items
-
 0008     unsigned byte   ??               label
-
 0009     unsigned byte   ??               label
-
 ........
-
 xxxx     unsigned byte   ??               label
-
+```
 
 The labels values are 0 to 9.
 
