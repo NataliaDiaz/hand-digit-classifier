@@ -5,9 +5,8 @@ MNIST Handwritten Digit Classifier flask application   `diaz.rodriguez.natalia@g
 
 How to run the flask application's builtin server (runs on http://127.0.0.1:5000/):
 
-```export FLASK_APP=digit_recognition.py
-flask run
-```
+`export FLASK_APP=digit_recognition.py`
+`flask run`
 
 Alternatively you can use (to run on http://127.0.0.1:5000/):
 
