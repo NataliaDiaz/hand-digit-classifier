@@ -5,15 +5,15 @@ MNIST Handwritten Digit Classifier flask application   `diaz.rodriguez.natalia@g
 
 How to run the flask application's builtin server (runs on http://127.0.0.1:5000/):
 
-```$ export FLASK_APP=digit_recognition.py
-$ flask run
+```export FLASK_APP=digit_recognition.py
+flask run
 ```
 
 Alternatively you can use (to run on http://127.0.0.1:5000/):
 
 ```
-$ export FLASK_APP=digit_recognition.py
-$ python -m flask run
+export FLASK_APP=digit_recognition.py
+python -m flask run
 ```
 
 Now head over to http://127.0.0.1:5000/, and you should see the application where an image can be uploaded for recognition. In order to download test and train images, run:
@@ -21,13 +21,13 @@ Now head over to http://127.0.0.1:5000/, and you should see the application wher
 ```python
 dc = DigitClassifier()
 dc.download_imgs("data/train.csv", "data/test.csv", "./data/train/", "./data/test/")
+
 ```
 
 To train and predict with DigitClassifier:
 
 ```python
 model = dc.train()
-#predicted = dc.predict(model, "/data/predicted/")
 dc.evaluate(model)
 ```
 
@@ -41,8 +41,8 @@ flask run --host=0.0.0.0
 This tells your operating system to listen on all public IPs. If the server does not start (or to log errors and stack traces in Debug mode), before running the server:
 
 ```
-$ export FLASK_DEBUG=1
-$ flask run
+export FLASK_DEBUG=1
+flask run
 ```
 
 
