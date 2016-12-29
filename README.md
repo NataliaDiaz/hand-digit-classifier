@@ -67,7 +67,7 @@ virtualenv venv
 and within the env folder, type: `source venv/bin/activate`
 
 
-2. Option a: Install keras docker, nvidia drivers and nvidia docker file.
+2. Option a: Install keras docker, nvidia drivers and nvidia docker file. Theano for the backend.
 
 2. Option b: Install
 ```
