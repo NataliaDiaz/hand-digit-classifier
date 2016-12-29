@@ -3,14 +3,12 @@
 MNIST Handwritten Digit Classifier flask application 
 
 
-```
-. venv/bin/activate
-```
-
 
 How to run the flask application's builtin server (runs on http://127.0.0.1:5000/):
 
+
 ```
+. venv/bin/activate
 $ export FLASK_APP=digit_recognition_webapp.py
 $ THEANO_FLAGS='blas.ldflags='   flask run
 ```
@@ -34,7 +32,6 @@ This tells your operating system to listen on all public IPs. If the server does
 
 ```
 $ export FLASK_DEBUG=1
-
 $  THEANO_FLAGS='blas.ldflags=' flask run
 ```
 
@@ -42,7 +39,7 @@ $  THEANO_FLAGS='blas.ldflags=' flask run
 # Model usage
 
 
-To run DigitClassifier and download test and train images, see `DigitClassifier.py`. It can be run as `THEANO_FLAGS='blas.ldflags=' python DigitClassifier.py` . Flagas are needed in the command line to prevent error in [1]
+To run DigitClassifier and download test and train images, see `DigitClassifier.py`. It can be run as `THEANO_FLAGS='blas.ldflags=' python DigitClassifier.py`  (Flag is needed in the command line to prevent error in [1]).
 
 ```python
 from DigitClassifier import DigitClassifier
@@ -53,7 +50,7 @@ To train and predict with DigitClassifier:
 
 ```python
 model = dc.train()
-#predicted = dc.predict(model)
+predicted = dc.predict(model)
 dc.evaluate(model)
 ```
 
@@ -62,26 +59,31 @@ dc.evaluate(model)
 # Requirements:
 1. Create and activate keras virtual environment in Python:
 
-```virtualenv venv
+```
+virtualenv venv
 ```
 
 
-within the env:
 
+within the env: `source venv/bin/activate`
 
-```source venv/bin/activate
-```
 
 2. Option a: Install keras docker, nvidia drivers and nvidia docker file.
 
 2. Option b: Install
-```pip install numpy jupyter keras matplotlib h5py
+```
+pip install numpy jupyter keras matplotlib h5py
 ```
 
 
+---
 
-[1] 
-```Error in error.txt : File "DigitClassifier.py", line 151, in train
+
+[1]
+
+
+```
+Error in error.txt : File "DigitClassifier.py", line 151, in train
 validation_data=(self.X_test, self.Y_test))
 File "/Users/natalia/planet/flask_mnist/venv/lib/python2.7/site-packages/Keras-1.2.0-py2.7.egg/keras/models.py", line 671, in fit
 initial_epoch=initial_epoch)
