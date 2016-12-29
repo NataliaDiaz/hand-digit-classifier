@@ -17,7 +17,7 @@ Alternatively you can use:
 
 ```
 $ THEANO_FLAGS='blas.ldflags=' python -m flask run
- ```
+```
 
 Head over to http://127.0.0.1:5000/, and you should see the application where an image can be uploaded for recognition.
 

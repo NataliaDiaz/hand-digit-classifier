@@ -1,0 +1,4 @@
+#!/Users/natalia/planet/flask_mnist/venv/bin/python
+# EASY-INSTALL-SCRIPT: 'Theano==0.9.0.dev4','theano-cache'
+__requires__ = 'Theano==0.9.0.dev4'
+__import__('pkg_resources').run_script('Theano==0.9.0.dev4', 'theano-cache')
