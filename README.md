@@ -1,6 +1,7 @@
 # hand-digit-classifier
 
-MNIST Handwritten Digit Classifier flask application   `diaz.rodriguez.natalia@gmail.com`
+MNIST Handwritten Digit Classifier flask application 
+
 
 `. venv/bin/activate`
 
@@ -50,11 +51,11 @@ This tells your operating system to listen on all public IPs. If the server does
 # Requirements:
 1. Create and activate keras virtual environment in Python:
 
-`virtualenv kerasenv`
+`virtualenv venv`
 
 within the env:
 
-`source kerasenv/bin/activate`
+`source venv/bin/activate`
 
 
 2. Option a: Install keras docker, nvidia drivers and nvidia docker file.
@@ -79,3 +80,7 @@ xxxx     unsigned byte   ??               label
 The labels values are 0 to 9.
 
 All digit images have been size-normalized and centered in a fixed size image of 28 x 28 pixels. Pixels are organized row-wise. In the original dataset each pixel of the image is represented by a value between 0 and 255, where 0 is black, 255 is white and anything in between is a different shade of grey.
+
+
+# Author
+Natalia Diaz Rodriguez, `diaz.rodriguez.natalia@gmail.com`
