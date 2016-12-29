@@ -17,7 +17,6 @@ Alternatively you can use:
 
 ```
 $ THEANO_FLAGS='blas.ldflags=' python -m flask run
- * Running on http://127.0.0.1:5000/
  ```
 
 Head over to http://127.0.0.1:5000/, and you should see the application where an image can be uploaded for recognition.
@@ -32,7 +31,7 @@ This tells your operating system to listen on all public IPs. If the server does
 
 ```
 $ export FLASK_DEBUG=1
-$  THEANO_FLAGS='blas.ldflags=' flask run
+$ THEANO_FLAGS='blas.ldflags=' flask run
 ```
 
 
@@ -65,7 +64,7 @@ virtualenv venv
 
 
 
-within the env: `source venv/bin/activate`
+and within the env folder, type: `source venv/bin/activate`
 
 
 2. Option a: Install keras docker, nvidia drivers and nvidia docker file.
