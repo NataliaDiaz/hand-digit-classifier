@@ -145,12 +145,24 @@ class DigitClassifier:
                                  # that its values are all non-negative and sum to 1.
         model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=["accuracy"])
         return model
+        # self.batch_size = 128
+        # self.n_epoch = 12
+        #
+        # # input image dimensions
+        # img_rows, img_cols = 28, 28
+        # # number of convolutional filters to use
+        # n_filters = 32
+        # # size of pooling area for max pooling
+        # pool_size = (2, 2)
+        # # convolution kernel size
+        # kernel_size = (3, 3)
         # model = Sequential()
-        # model.add(Convolution2D(nb_filters, kernel_size[0], kernel_size[1],
+        #
+        # model.add(Convolution2D(n_filters, kernel_size[0], kernel_size[1],
         #                         border_mode='valid',
         #                         input_shape=input_shape))
         # model.add(Activation('relu'))
-        # model.add(Convolution2D(nb_filters, kernel_size[0], kernel_size[1]))
+        # model.add(Convolution2D(n_filters, kernel_size[0], kernel_size[1]))
         # model.add(Activation('relu'))
         # model.add(MaxPooling2D(pool_size=pool_size))
         # model.add(Dropout(0.25))
@@ -159,13 +171,15 @@ class DigitClassifier:
         # model.add(Dense(128))
         # model.add(Activation('relu'))
         # model.add(Dropout(0.5))
-        # model.add(Dense(nb_classes))
+        # model.add(Dense(self.n_classes))
         # model.add(Activation('softmax'))
         #
         # model.compile(loss='categorical_crossentropy',
         #               optimizer='adadelta',
         #               metrics=['accuracy'])
-        # return model
+
+        #model.fit(X_train, Y_train, batch_size=self.batch_size, self.nb_epoch= self.n_epoch,
+                  #verbose=1, validation_data=(X_test, Y_test))
 
 
     def compile_MLP(self):

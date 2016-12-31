@@ -62,6 +62,11 @@ def index():
     	</form>
     	'''
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('page_not_found.html'), 404
+
+
 if __name__ == '__main__':
 	"""
     In order to not restart the local server after each change to your code, if you enable debug
