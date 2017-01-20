@@ -10,13 +10,7 @@ How to run the flask application's builtin server (runs on http://127.0.0.1:5000
 ```
 . venv/bin/activate
 $ export FLASK_APP=digit_recognition_webapp.py
-$ THEANO_FLAGS='blas.ldflags='   flask run
-```
-
-Alternatively you can use:
-
-```
-$ THEANO_FLAGS='blas.ldflags=' python -m flask run
+$ THEANO_FLAGS='blas.ldflags=' python -m flask run             //or $ THEANO_FLAGS='blas.ldflags='  flask run
 ```
 
 Head over to http://127.0.0.1:5000/, and you should see the application where an image can be uploaded for recognition.
@@ -74,6 +68,11 @@ and within the env folder, type: `source venv/bin/activate`
 pip install numpy jupyter keras matplotlib h5py
 ```
 
+3. Requirements (obtained from `pip freeze`) can be installed:
+
+```
+pip install -r requirements.py
+```
 
 ---
 
