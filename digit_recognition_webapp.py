@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 from flask import Flask, request
-from flask import redirect, url_for
+from flask import redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 from sklearn.externals import joblib
 # joblib.dump & joblib.load is more efficient than pickle on objects with large numpy arrays
